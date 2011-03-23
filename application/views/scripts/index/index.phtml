@@ -1,3 +1,19 @@
+<?php $this->JQuery()->addJavascript(<<<EOS
+function loadMessages() {
+    jQuery('#data').load('{$this->url(array (
+        'controller' => 'index',
+        'action' => 'index',
+        'format' => 'html',
+    ), null, true)}');
+}
+EOS
+) ?>
+<?php $this->JQuery()->addOnLoad(<<<EOS
+loadMessages();
+setInterval("loadMessages()", 6000);
+EOS
+) ?>
+
 <div id="data">
 <?php echo $this->render('index/index.html.phtml'); ?>
 </div>
