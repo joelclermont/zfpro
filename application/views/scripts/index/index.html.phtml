@@ -1,0 +1,8 @@
+<?php
+if (!empty($this->users)): ?>
+<ul>
+<?php foreach($this->users as $user) { ?>
+	<li><?php echo $user->firstName.' '.$user->lastName.' ('.$user->id.')'; ?></li>
+<?php } ?>
+</ul>
+<?php endif; ?>
