@@ -12,7 +12,7 @@ class IndexController extends Zend_Controller_Action
                 'setAutoDisableLayout' => true
             ));
         }
-        $contextSwitch->addActionContext('index', 'html')
+        $contextSwitch->addActionContext('index', array ('html','json'))
                       ->initContext();
     }
 
