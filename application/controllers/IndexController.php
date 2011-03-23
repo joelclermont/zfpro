@@ -13,7 +13,7 @@ class IndexController extends Zend_Controller_Action
             ));
         }
         $contextSwitch->addActionContext('index', array ('html','json'))
-                      ->setAutoJsonsetAutoJsonSerialization(true)
+                      ->setAutoJsonSerialization(true)
                       ->initContext();
     }
 
